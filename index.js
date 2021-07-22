@@ -97,6 +97,8 @@ function main() {
     }
       
     atmosphere.rotation.y += 0.001;
+    sphere.rotation.y += 0.0005;
+    
 
 
 
