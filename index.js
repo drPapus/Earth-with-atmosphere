@@ -17,17 +17,15 @@ function main() {
   controls.target.set(0, 0, 0);
   controls.update();
 
-  //Sceen
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color('lightblue');
+  //Background space img
+  const spaceTexture = new THREE.TextureLoader().load('./img/space.jpg');
+  scene.background = spaceTexture;
+  
+  //scene.background = new THREE.Color('lightblue');
 
 
-  // //Cube
-  // const cube = new THREE.Mesh(
-  //   new THREE.BoxBufferGeometry(3, 3, 3),
-  //   new THREE.MeshPhongMaterial({color: 'red'}),
-  // );
-  // scene.add(cube);
+
 
   //Earth
 
@@ -41,7 +39,7 @@ function main() {
     //Atmosphere
 
     const atmosphere = new THREE.Mesh(new THREE.
-      SphereGeometry(5.3, 50, 50), new THREE.
+      SphereGeometry(5.15, 50, 50), new THREE.
       MeshBasicMaterial({
         map: new THREE.TextureLoader().load(
           './img/cloud.png'
