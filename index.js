@@ -30,7 +30,6 @@ function main() {
   const sphere = new THREE.Mesh(new THREE.
     SphereGeometry(5, 50, 50), new THREE.
     MeshBasicMaterial({
-      //color: 0xFF0000
       map: new THREE.TextureLoader().load(
         './img/earth.jpg'
       )
@@ -42,7 +41,6 @@ function main() {
     const atmosphere = new THREE.Mesh(new THREE.
       SphereGeometry(5.3, 50, 50), new THREE.
       MeshBasicMaterial({
-        //color: 0xFF0000
         map: new THREE.TextureLoader().load(
           './img/cloud.png'
         ),transparent: true, opacity: 0.5, color: 0xFFFFFF
@@ -98,6 +96,7 @@ function main() {
       camera.updateProjectionMatrix();
     }
       
+    atmosphere.rotation.y += 0.001;
 
 
 
